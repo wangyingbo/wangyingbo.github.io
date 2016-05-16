@@ -22,9 +22,9 @@ kramdown:
 
 
 
-# 地址设置
-baseurl: "/jekyll-pithy"
-url: "http://127.0.0.1:4000"
+# 地址设置http://127.0.0.1:4000
+baseurl: "/wangyingbo.top"
+url: "http://wangyingbo.top"
 
 
 # 分页设置
