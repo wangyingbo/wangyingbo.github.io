@@ -5,7 +5,7 @@ id: id_about_me
 permalink: /about/
 ---
 
-![王颖博]()
+![王颖博](https://raw.githubusercontent.com/wangyingbo/wangyingbo.github.io/master/me.jpg)
 
 我的格言
 ===
