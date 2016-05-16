@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用CSS实现三角形
+title: 使用CSS实现三角形-转
 tags:  [triangle]
 categories: [前端开发]
 author: Jaylin
