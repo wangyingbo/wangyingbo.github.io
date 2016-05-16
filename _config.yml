@@ -4,14 +4,14 @@ version: "1.0"
 permalink: /:year/:month/:day/:title/
 
 # 站点设置
-title: "Guovz"
-email: pzhuwjl@qq.com
-description: "王继林的个人博客"
-keywords: "Guovz"
+title: "王颖博"
+email: wangyingbo528@126.com
+description: "莓墙"
+keywords: "莓墙"
 
 # 用户信息设置
-weibo_username: Guovz
-github_username: guovz
+weibo_username: 王颖博
+github_username: wangyingbo
 
 # Markdown设置
 kramdown:
