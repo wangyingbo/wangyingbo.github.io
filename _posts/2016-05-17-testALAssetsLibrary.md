@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 根据<AssetsLibrary/AssetsLibrary.h>框架自定义相册
+title: 根据AssetsLibrary/AssetsLibrary.h框架自定义相册
 tags:  [iOS]
 categories: [iOS开发]
 author: 王颖博
-excerpt: "根据<AssetsLibrary/AssetsLibrary.h>框架自定义相册"
+excerpt: "根据AssetsLibrary/AssetsLibrary.h框架自定义相册"
 ---
 - > **testALAssetsLibrary**
 - iOS开发中有时候会经常需要拍照和选取图片，拍照直接调用UIImageViewPicker就可以了，如若要自定义相机的话可以自己定义拍照页面，此先略过不讲。这篇文章只讲述如何自定义相册——利用系统的<AssetsLibrary/AssetsLibrary.h>框架。
