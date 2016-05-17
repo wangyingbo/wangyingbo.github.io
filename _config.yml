@@ -23,6 +23,7 @@ kramdown:
 
 
 # 地址设置http://wangyingbo.top
+baseurl: "/wangyingbo"
 url: "wangyingbo.top"
 
 
