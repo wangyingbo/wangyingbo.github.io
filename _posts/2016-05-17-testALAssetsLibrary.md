@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 根据<AssetsLibrary/AssetsLibrary.h>框架自定义相册
-tags:  [iOS]
+tags:  [iOS][AssetsLibrary]
 categories: [iOS开发]
 author: 王颖博
 excerpt: "根据<AssetsLibrary/AssetsLibrary.h>框架自定义相册"
