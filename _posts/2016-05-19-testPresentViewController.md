@@ -41,7 +41,9 @@ The “problem” is that iOS is very finicky about not wasting memory,and since
         testVC代码：
         self.view.backgroundColor = [UIColor blackColor];
         self.view.alpha = 0.7;
-效果图：![半透明](https://raw.githubusercontent.com/wangyingbo/testPresentViewController/master/images/gif1.gif)
+        
+        
+![半透明](https://raw.githubusercontent.com/wangyingbo/testPresentViewController/master/images/gif1.gif)
         
 - 还有一种毛玻璃效果       
 
@@ -59,7 +61,7 @@ The “problem” is that iOS is very finicky about not wasting memory,and since
         [self.view addSubview:visualEffectView];
         
         
-效果图：![毛玻璃](https://raw.githubusercontent.com/wangyingbo/testPresentViewController/master/images/gif2.gif)
+![毛玻璃](https://raw.githubusercontent.com/wangyingbo/testPresentViewController/master/images/gif2.gif)
 
 - 另外，网上有一张方法，不过我试了一下发现并没有效果。大家可以试试。present一个窗口化的ViewController。但是这个窗口默认的背景色是磨砂不透明的，因此还需要把它的背景色设为透明。这样看起来就像是全屏遮罩一样，但是由于系统不认为新的View是全屏的，所以上一个View也不会被unload。如下：
 
