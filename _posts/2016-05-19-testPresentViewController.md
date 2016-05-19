@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 实现全屏模态半透明页面的效果
+title: 实现全屏模态半透明页面的效果和毛玻璃效果
 tags:  [iOS]
 categories: [iOS开发]
 author: 王颖博
 excerpt: "实现全屏模态半透明页面的效果和毛玻璃效果"
 ---
 
-
+- ***实现全屏模态半透明页面的效果和毛玻璃效果***
 
 - 这阵子产品里有一个效果，当mainVC模态跳转也即present一个testVC时，要让testVC的背景半透明，可以模糊看得到mainVC的一些东西。要求如下：![](https://github.com/wangyingbo/testPresentViewController/blob/master/images/1.jpg)
 原以为是简单不过的事情，随手写了以下代码：
