@@ -143,6 +143,7 @@ Runtime是运行时机制，具体的原理这里不用探讨，我们只探讨�
     
     static const void *leftBlock = &leftBlock;
     static const void *rightBlock = &rightBlock;
+    
 **3**
 接下来，利用AssociatedObject具体实现
 
