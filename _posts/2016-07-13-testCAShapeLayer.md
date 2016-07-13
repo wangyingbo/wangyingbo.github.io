@@ -9,6 +9,7 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 
 **CAShapeLayer的用法**
 
+
 这篇博文介绍了CAShapeLayer的四种用法，先放上项目gif图。
 
 ![效果图](https://raw.githubusercontent.com/wangyingbo/testCAShapeLayer/master/gif.gif)
@@ -16,8 +17,8 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 > 一、画一个带尖角的视图；
 
 - 经常会在项目里遇到带小尖角的一个视图。当然我们可以考虑找UI设计师帮我们切出这样一个带尖角的图片，用UIImageView去加载它。不过这样的话有很多不便利的地方，比如说想调一下背景颜色，想改变一下尖角指向的位置等等，都需要重新找我们的设计师重新做图。而程序猿们是轻易不能求人的，so还是让我自己动手实现它吧。
-- 其实这个情况在之前我是做过的，之前的项目[DEMO](https://github.com/wangyingbo/testCornerView)
-  效果图如图：![以前DEMO效果图](https://raw.githubusercontent.com/wangyingbo/testCornerView/master/gif.gif)
+
+- 其实这个情况在之前我是做过的，之前的项目[DEMO](https://github.com/wangyingbo/testCornerView)。效果图如图：![以前DEMO效果图](https://raw.githubusercontent.com/wangyingbo/testCornerView/master/gif.gif)
   
   不过在此我们使用mask属性再做一遍。
 - 用mask属性做一下类似上图中尖角的view。
@@ -85,7 +86,42 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 
 > 二、画一个胶囊状的音量控制条，可以根据音量大小实时显示；
 
-- 画一个胶囊状的音量控制条。
+- 这个胶囊状的音量指示条其实也是很简单就能完成了。首先来分析一下结构：我们可以把外面的这个胶囊形状用一个view去加载它，设置一下cornerRadius，设置一下线条，这样我们就可以得到一个椭圆形的内为白色的view；然后再在此view里填充一个layer层，假如view层我们手动设置过clipsToBounds的话，刚好就可以切掉椭圆形外面的layer。得到如图所示的指示图。
+
+- 首先第一步，先做一个椭圆形的view。
+
+        /**
+         *  测试CAShapeLayer的drawRect属性
+         */
+        - (void)addTestDrawRect
+        {
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(40, 200, 50, 100)];
+            view.layer.borderWidth = 0.5;
+            view.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            view.layer.cornerRadius = 25;
+            [self.view addSubview:view];
+            self.dynamicView = view;
+            _dynamicView.clipsToBounds = YES;
+        }
+
+- 第二步，给这个椭圆形的view加layer层。
+
+
+            /**
+                *  调节控制音量条
+                */
+            -(void)refreshUIWithVoicePower: (NSInteger)voicePower{
+                CGFloat height = (voicePower)*(CGRectGetHeight(_dynamicView.frame)/TOTAL_NUM);
+                [_indicateLayer removeFromSuperlayer];
+                _indicateLayer = nil;
+                UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, CGRectGetHeight(_dynamicView.frame)-height, CGRectGetWidth(_dynamicView.frame), height) cornerRadius:0];
+                _indicateLayer = [CAShapeLayer layer];
+                _indicateLayer.path = path.CGPath;
+                _indicateLayer.fillColor = [UIColor greenColor].CGColor;
+                [_dynamicView.layer addSublayer:_indicateLayer];
+            }
+            
+- 最后一步，完成。
 
 > 三、画一个圆形的进度条；
 
