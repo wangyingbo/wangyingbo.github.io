@@ -167,5 +167,5 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 - 这个进度条是分为两个部分的，第一部分是外面的圆形，第二部分是里面的对勾。然后分别加上动画即可。
 
 
-
+> 五、项目最后放上代码[DEMO](https://github.com/wangyingbo/testCAShapeLayer)
 
