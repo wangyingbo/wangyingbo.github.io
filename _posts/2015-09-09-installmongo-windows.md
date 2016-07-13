@@ -3,7 +3,7 @@ layout: post
 title: Windows下安装MongoDB
 tags:  [MongoDB,install]
 categories: [数据库应用]
-author: Jaylin
+author: 王颖博
 excerpt: "简述Windows中MongoDB安装及配置过程"
 ---
 
