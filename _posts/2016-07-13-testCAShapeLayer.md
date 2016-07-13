@@ -125,9 +125,47 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 
 > 三、画一个圆形的进度条
 
-- 画一个圆形的进度条。
+- 画一个圆形的进度条，首先要画一个圆形，然后是给这个圆环加动画。直接上代码吧。
+
+        /**
+         *  测试画圆形的进度条
+         */
+        - (void)addCycleProgress
+        {
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(40, 350, 100, 100)];
+            view.layer.borderWidth = 0.5;
+            view.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            [self.view addSubview:view];
+            self.demoView = view;
+            
+            CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+            shapeLayer.frame = _demoView.bounds;
+            shapeLayer.strokeEnd = 0.7f;
+            shapeLayer.strokeStart = 0.1f;
+            
+            UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:_demoView.bounds];
+            shapeLayer.path = path.CGPath;
+            shapeLayer.fillColor = [UIColor clearColor].CGColor;
+            shapeLayer.lineWidth = 2.0f;
+            shapeLayer.strokeColor = [UIColor redColor].CGColor;
+            [_demoView.layer addSublayer:shapeLayer];
+            
+            CABasicAnimation *pathAnima = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+            pathAnima.duration = 3.0f;
+            pathAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            pathAnima.fromValue = [NSNumber numberWithFloat:0.0f];
+            pathAnima.toValue = [NSNumber numberWithFloat:1.0f];
+            pathAnima.fillMode = kCAFillModeForwards;
+            pathAnima.removedOnCompletion = NO;
+            [shapeLayer addAnimation:pathAnima forKey:@"strokeEndAnimation"];
+        }
+
+
 
 > 四、画一个有动画效果的进度条
 
-- 画一个有动画效果的进度条。
+- 这个进度条是分为两个部分的，第一部分是外面的圆形，第二部分是里面的对勾。然后分别加上动画即可。
+
+
+
 
