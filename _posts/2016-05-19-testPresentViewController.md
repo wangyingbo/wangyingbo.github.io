@@ -19,6 +19,8 @@ excerpt: "实现全屏模态半透明页面的效果和毛玻璃效果"
         testVC代码：
             self.view.backgroundColor = [UIColor blackColor];
             self.view.alpha = 0.7;
+            
+            
 结果在present时发现了问题，当present到testVC时，发现testVC页面先是半透明了一下，然后很快就有变黑了。效果是这样的：
 
 ![](https://raw.githubusercontent.com/wangyingbo/testPresentViewController/master/images/gif.gif)
