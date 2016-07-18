@@ -10,7 +10,7 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 **CAShapeLayer的用法**
 
 
-这篇博文介绍了CAShapeLayer的四种用法，先放上项目gif图。
+这篇博文介绍了CAShapeLayer的五种用法，先放上项目gif图。
 
 ![效果图](https://raw.githubusercontent.com/wangyingbo/testCAShapeLayer/master/gif.gif)
 
@@ -166,6 +166,12 @@ excerpt: "用CAShapeLayer画一个带动画的进度条"
 
 - 这个进度条是分为两个部分的，第一部分是外面的圆形，第二部分是里面的对勾。然后分别加上动画即可。
 
+> 五、画一个有波浪图的进度条
 
-> 五、项目最后放上代码[DEMO](https://github.com/wangyingbo/testCAShapeLayer)
+- 暂无介绍，有空再更。
+
+
+
+
+> 六、项目最后放上代码[DEMO](https://github.com/wangyingbo/testCAShapeLayer)
 
