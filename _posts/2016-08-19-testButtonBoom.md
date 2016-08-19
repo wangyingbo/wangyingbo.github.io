@@ -102,9 +102,12 @@ excerpt: "测试button点击的粒子爆炸效果"
             return newimg;
         }
 
+- 效果图
+
+![git图](https://raw.githubusercontent.com/wangyingbo/testButtonBoom/master/gif.gif)
 
 
-##最后附上DEMO [testButtonBoom](https://github.com/wangyingbo/testButtonBoom)
+> 最后附上DEMO [testButtonBoom](https://github.com/wangyingbo/testButtonBoom)
 
 
 
