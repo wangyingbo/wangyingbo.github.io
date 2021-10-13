@@ -55,7 +55,7 @@ yat:
 # sitemap: false
 
 # If you want to change site language, you can set lang option
-# lang: "en"  # default lang is en
+lang: "zh-CN"  # default lang is en
 
 # Translate languges
 # langs refer to https://cloud.google.com/translate/docs/languages
@@ -137,11 +137,11 @@ yat:
 #   - about.md
 
 # Page default value
-# defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
-#     banner: "Your image url"
+defaults:
+  home:
+    heading: "果壳里的宇宙"
+    subheading: "YI could be bounded in a nutshell,and count myself a king of infinite space"
+    # banner: "Your image url"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
