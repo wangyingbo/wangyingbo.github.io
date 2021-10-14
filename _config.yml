@@ -140,7 +140,7 @@ lang: "zh-CN"  # default lang is en
 defaults:
   home:
     heading: "果壳里的宇宙"
-    subheading: "YI could be bounded in a nutshell,and count myself a king of infinite space"
+    subheading: "I could be bounded in a nutshell,and count myself a king of infinite space"
     # banner: "Your image url"
 
 # Banner default settings
